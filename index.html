@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Masjid Nur Islamic Community of South West Florida" data-ar="مَسْجِدُ نُور - المَرْكَزُ الإِسْلَامِيُّ لِجَنُوبِ غَرِبِ فْلُورِيدَا">Masjid Nur Islamic Community of South West Florida</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sapphireDark: '#0B132B',
+                        sapphireNavy: '#1C2541',
+                        sapphireCard: '#1E2A4A',
+                        goldCustom: '#D4AF37',
+                        goldHover: '#C5A028',
+                        goldGlow: '#F59E0B',
+                        sandLight: '#F8FAFC',
+                        sandCard: '#FFFFFF',
+                        charcoalText: '#0F172A',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow-gold': '0 0 25px rgba(212, 175, 55, 0.4)',
+                        'glow-sapphire': '0 0 25px rgba(28, 37, 65, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .glass-panel-dark {
+            background: rgba(28, 37, 65, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .glass-panel-light {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+        .digital-clock {
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 2px;
+        }
+        .nav-link {
+            transition: all 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #D4AF37;
+            transform: translateY(-1px);
+        }
+        /* Memory Match Game Card Styles */
+        .card-inner {
+            transition: transform 0.4s;
+            transform-style: preserve-3d;
+        }
+        .card-flipped {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="bg-sandLight text-charcoalText font-sans antialiased selection:bg-goldCustom selection:text-sapphireDark pb-24">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-sapphireDark text-white text-xs md:text-sm py-2 px-4 border-b border-goldCustom/30 shadow-sm">
+        <div class="container mx-auto flex flex-wrap justify-between items-center px-2 gap-2">
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="https://maps.google.com/?q=25148+Harborview+Rd,+Punta+Gorda,+FL+33980" target="_blank" rel="noopener" class="hover:text-goldCustom transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-map-location-dot text-goldCustom"></i>
+                    <span data-en="25148 Harborview Rd, Punta Gorda, FL 33980" data-ar="25148 طريق هاربوفيو، بونتا غوردا، فلوريدا 33980">25148 Harborview Rd, Punta Gorda, FL 33980</span>
+                </a>
+            </div>
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <a href="tel:9416258855" class="bg-goldCustom/20 text-goldCustom hover:bg-goldCustom hover:text-sapphireDark px-2.5 py-1 rounded-md font-semibold border border-goldCustom/40 transition flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-xs"></i>
+                    <span>(941) 625-8855</span>
+                </a>
+                <button onclick="openDMModal()" class="bg-goldCustom/20 text-goldCustom hover:bg-goldCustom hover:text-sapphireDark px-2.5 py-1 rounded-md font-semibold border border-goldCustom/40 transition flex items-center gap-1">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                    <span data-en="Send Direct Message" data-ar="إرسال رسالة مباشرة">Send Direct Message</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION HEADER -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100">
+        <div class="container mx-auto px-4 py-3.5 flex justify-between items-center">
+            <!-- Mosque Logo & Branding -->
+            <a href="#about" class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-10 h-10 rounded-lg bg-sapphireNavy text-goldCustom flex items-center justify-center font-serif text-xl font-bold shadow-md ring-2 ring-goldCustom/40">
+                    <i class="fa-solid fa-mosque text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-lg md:text-xl text-sapphireNavy block leading-none" data-en="Masjid Nur" data-ar="مَسْجِدُ نُور">Masjid Nur</span>
+                    <span class="text-[10px] md:text-xs text-gray-500 font-medium tracking-wide" data-en="Islamic Community of South West Florida" data-ar="المركز الإسلامي لجنوب غرب فلوريدا">Islamic Community of South West Florida</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center space-x-6 space-x-reverse text-sm font-medium text-sapphireNavy">
+                <a href="#about" class="nav-link" data-en="About Us" data-ar="عن المركز">About Us</a>
+                <a href="#spiritual-hub" class="nav-link" data-en="Sacred Hub" data-ar="المركز الروحي">Sacred Hub</a>
+                <a href="#services" class="nav-link" data-en="Services & Nikah" data-ar="الخدمات والنيكاح">Services & Nikah</a>
+                <a href="#janazah" class="nav-link text-amber-600 font-bold" data-en="24/7 Funeral Care" data-ar="خدمات الجنائز 24/7">24/7 Funeral Care</a>
+                <a href="#kids-corner" class="nav-link" data-en="Kids Corner" data-ar="ركن الأطفال">Kids Corner</a>
+            </nav>
+
+            <!-- Action Controls: Language Toggle & Donate Button -->
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <button onclick="toggleLanguage()" id="lang-toggle-btn" class="bg-sapphireNavy hover:bg-sapphireDark text-goldCustom font-bold text-xs px-3 py-2 rounded-md border border-goldCustom/40 transition flex items-center gap-1.5 shadow-sm">
+                    <i class="fa-solid fa-globe text-sm"></i>
+                    <span id="lang-label">العربية</span>
+                </button>
+                <a href="https://masjidnur.org/donate" target="_blank" rel="noopener" class="bg-goldCustom hover:bg-goldHover text-sapphireDark font-bold text-xs md:text-sm px-4 py-2 rounded-md shadow-md hover:shadow-glow-gold transition transform hover:-translate-y-0.5 flex items-center gap-1.5">
+                    <i class="fa-solid fa-heart text-xs"></i>
+                    <span data-en="Donate" data-ar="تبرع">Donate</span>
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-sapphireNavy text-xl p-1.5 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 py-3 space-y-2 text-sm font-medium text-sapphireNavy">
+            <a href="#about" class="block py-2 border-b border-gray-100" data-en="About Us" data-ar="عن المركز">About Us</a>
+            <a href="#spiritual-hub" class="block py-2 border-b border-gray-100" data-en="Sacred Hub" data-ar="المركز الروحي">Sacred Hub</a>
+            <a href="#services" class="block py-2 border-b border-gray-100" data-en="Services & Nikah" data-ar="الخدمات والنيكاح">Services & Nikah</a>
+            <a href="#janazah" class="block py-2 text-amber-600 font-bold border-b border-gray-100" data-en="24/7 Funeral Care" data-ar="خدمات الجنائز 24/7">24/7 Funeral Care</a>
+            <a href="#kids-corner" class="block py-2" data-en="Kids Corner & Games" data-ar="ركن الأطفال والألعاب">Kids Corner & Games</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION & COMPACT SIDE PRAYER WIDGET -->
+    <section class="relative bg-gradient-to-b from-sapphireDark via-sapphireNavy to-sapphireDark text-white py-12 md:py-16 overflow-hidden border-b border-goldCustom/30">
+        <!-- Background Ambient Geometry -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Left Hero Banner Content -->
+                <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-goldCustom/20 border border-goldCustom/40 px-3.5 py-1.5 rounded-md text-goldCustom text-xs md:text-sm font-semibold backdrop-blur-md">
+                        <i class="fa-solid fa-star-and-crescent text-goldCustom"></i>
+                        <span data-en="Welcome to Masjid Nur • Southwest Florida" data-ar="أَهْلًا وَسَهْلًا بِكُمْ فِي مَسْجِدِ نُور • جنوب غرب فلوريدا">Welcome to Masjid Nur • Southwest Florida</span>
+                    </div>
+
+                    <div class="text-2xl md:text-3xl font-serif text-goldCustom tracking-wide leading-relaxed">
+                        بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+                    </div>
+
+                    <h1 class="font-serif text-3xl md:text-5xl font-bold text-white leading-tight" data-en="A Sacred Sanctuary of Faith, Unity & Guidance" data-ar="صَرْحٌ رُوحِيٌّ لِلإِيمَانِ وَالوَحْدَةِ وَالهِدَايَةِ">
+                        A Sacred Sanctuary of Faith, Unity & Guidance
+                    </h1>
+
+                    <p class="text-sm md:text-base text-gray-200 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0" data-en="Serving Port Charlotte, Punta Gorda, and Charlotte County since 1982 with daily congregational prayers, weekly Friday Jumu'ah services, and dedicated community care." data-ar="نَخْدُمُ بَوَرْت شَارْلُوت وَبُونْتَا غُورْدَا وَمُقَاطَعَة شَارْلُوت مُنْذُ عَامِ 1982 مَعَ الصَّلَوَاتِ الخَمْسِ وَصَلَاةِ الجُمُعَةِ وَالرِّعَايَةِ المُجْتَمَعِيَّةِ.">
+                        Serving Port Charlotte, Punta Gorda, and Charlotte County since 1982 with daily congregational prayers, weekly Friday Jumu'ah services, and dedicated community care.
+                    </p>
+
+                    <!-- Facility Badges -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2 text-xs">
+                        <span class="bg-sapphireCard/80 border border-goldCustom/30 text-gray-200 px-3 py-1.5 rounded-md flex items-center gap-1.5">
+                            <i class="fa-solid fa-person-dress text-goldCustom"></i>
+                            <span data-en="Dedicated Women's Prayer & Wudu Space" data-ar="مصلى وموضأ مخصص للنساء">Dedicated Women's Prayer & Wudu Space</span>
+                        </span>
+                        <span class="bg-sapphireCard/80 border border-goldCustom/30 text-gray-200 px-3 py-1.5 rounded-md flex items-center gap-1.5">
+                            <i class="fa-solid fa-wheelchair text-goldCustom"></i>
+                            <span data-en="Wheelchair Accessible" data-ar="مرافق مجهزة لذوي الاحتياجات">Wheelchair Accessible</span>
+                        </span>
+                        <span class="bg-sapphireCard/80 border border-goldCustom/30 text-gray-200 px-3 py-1.5 rounded-md flex items-center gap-1.5">
+                            <i class="fa-solid fa-square-parking text-goldCustom"></i>
+                            <span data-en="Onsite Parking Available" data-ar="مواقف سيارات متاحة">Onsite Parking Available</span>
+                        </span>
+                    </div>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-3">
+                        <a href="tel:9416258855" class="bg-goldCustom hover:bg-goldHover text-sapphireDark font-bold text-xs md:text-sm px-5 py-2.5 rounded-md shadow-lg transition flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-xs"></i>
+                            <span data-en="Call Masjid: (941) 625-8855" data-ar="اتصل بالمسجد: (941) 625-8855">Call Masjid: (941) 625-8855</span>
+                        </a>
+                        <a href="https://wa.me/19416258855" target="_blank" rel="noopener" class="bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs md:text-sm px-5 py-2.5 rounded-md shadow-lg transition flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span data-en="WhatsApp Chat" data-ar="محادثة واتساب">WhatsApp Chat</span>
+                        </a>
+                        <a href="https://maps.google.com/?q=25148+Harborview+Rd,+Punta+Gorda,+FL+33980" target="_blank" rel="noopener" class="bg-sapphireCard hover:bg-sapphireNavy text-white border border-goldCustom/40 font-bold text-xs md:text-sm px-5 py-2.5 rounded-md transition flex items-center gap-2">
+                            <i class="fa-solid fa-map-location-dot text-goldCustom"></i>
+                            <span data-en="Get Directions" data-ar="الحصول على الاتجاهات">Get Directions</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side Compact Prayer Timetable Widget -->
+                <div class="lg:col-span-5" id="prayer-widget">
+                    <div class="glass-panel-dark rounded-2xl p-5 shadow-2xl border border-goldCustom/40 space-y-4">
+                        <div class="flex justify-between items-center border-b border-goldCustom/30 pb-3">
+                            <div>
+                                <h3 class="font-serif text-lg font-bold text-goldCustom flex items-center gap-2">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span data-en="Daily Prayer Schedule" data-ar="مواقيت الصلاة اليومية">Daily Prayer Schedule</span>
+                                </h3>
+                                <div class="text-[11px] text-gray-300 digital-clock mt-0.5" id="live-time">Live Clock Loading...</div>
+                            </div>
+                            <div class="text-right">
+                                <span class="bg-goldCustom/20 text-goldCustom text-[10px] px-2 py-1 rounded-md font-bold border border-goldCustom/40 block" id="live-date">16 Rabi' al-Awwal 1448 AH</span>
+                            </div>
+                        </div>
+
+                        <!-- Prayer Times List -->
+                        <div class="space-y-2 text-xs">
+                            <div class="flex justify-between items-center p-2 rounded-md bg-sapphireNavy/60 border border-gray-700/50">
+                                <span class="font-semibold text-gray-200" data-en="Fajr (Dawn)" data-ar="الفجر">Fajr (Dawn)</span>
+                                <span class="font-mono text-goldCustom font-bold">6:05 AM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 rounded-md bg-sapphireNavy/40 border border-gray-700/30 text-gray-400">
+                                <span data-en="Shuruq (Sunrise)" data-ar="الشروق">Shuruq (Sunrise)</span>
+                                <span class="font-mono">7:15 AM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 rounded-md bg-sapphireNavy/60 border border-gray-700/50">
+                                <span class="font-semibold text-gray-200" data-en="Dhuhr (Noon)" data-ar="الظهر">Dhuhr (Noon)</span>
+                                <span class="font-mono text-goldCustom font-bold">1:26 PM</span>
+                            </div>
+                            <!-- Next Prayer Highlighted -->
+                            <div class="flex justify-between items-center p-2.5 rounded-md bg-goldCustom/20 border-2 border-goldCustom shadow-glow-gold">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-star text-goldCustom text-xs"></i>
+                                    <span class="font-bold text-white" data-en="Asr (Afternoon) • Next" data-ar="العصر • الصلاة القادمة">Asr (Afternoon) • Next</span>
+                                </div>
+                                <span class="font-mono text-goldCustom font-extrabold text-sm">4:56 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 rounded-md bg-sapphireNavy/60 border border-gray-700/50">
+                                <span class="font-semibold text-gray-200" data-en="Maghrib (Sunset)" data-ar="المغرب">Maghrib (Sunset)</span>
+                                <span class="font-mono text-goldCustom font-bold">7:42 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center p-2 rounded-md bg-sapphireNavy/60 border border-gray-700/50">
+                                <span class="font-semibold text-gray-200" data-en="Isha (Night)" data-ar="العشاء">Isha (Night)</span>
+                                <span class="font-mono text-goldCustom font-bold">8:46 PM</span>
+                            </div>
+                        </div>
+
+                        <!-- Friday Jumu'ah Card -->
+                        <div class="bg-sapphireCard/90 border border-goldCustom/40 p-3 rounded-md text-xs space-y-1.5">
+                            <div class="font-serif font-bold text-goldCustom flex items-center gap-1.5">
+                                <i class="fa-solid fa-kaaba"></i>
+                                <span data-en="Friday Jumu'ah Congregational Services" data-ar="صلاة الجمعة المباركة">Friday Jumu'ah Congregational Services</span>
+                            </div>
+                            <div class="flex justify-between text-[11px] text-gray-200">
+                                <span data-en="1st Shift Khutbah:" data-ar="الخطبة الأولى:">1st Shift Khutbah:</span>
+                                <span class="font-bold text-goldCustom">1:20 PM</span>
+                            </div>
+                            <div class="flex justify-between text-[11px] text-gray-200">
+                                <span data-en="2nd Shift Khutbah:" data-ar="الخطبة الثانية:">2nd Shift Khutbah:</span>
+                                <span class="font-bold text-goldCustom">2:15 PM</span>
+                            </div>
+                        </div>
+
+                        <!-- Calendar Sync Button -->
+                        <button onclick="downloadICS()" class="w-full bg-goldCustom/20 hover:bg-goldCustom text-goldCustom hover:text-sapphireDark font-bold text-xs py-2 rounded-md border border-goldCustom/40 transition flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-calendar-plus"></i>
+                            <span data-en="Sync Jumu'ah to Calendar (.ics)" data-ar="إضافة مواقيت الجمعة للتقويم (.ics)">Sync Jumu'ah to Calendar (.ics)</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT OUR SANCTUARY SECTION -->
+    <section id="about" class="py-14 md:py-20 bg-sandLight border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-10">
+                <span class="text-goldCustom font-bold text-xs md:text-sm tracking-widest uppercase block" data-en="Our Sacred House & Community" data-ar="صَرْحُنَا المَبَارَكُ وَمُجْتَمَعُنَا">Our Sacred House & Community</span>
+                <h2 class="font-serif text-2xl md:text-4xl font-bold text-sapphireNavy mt-1" data-en="Serving South West Florida Since 1982" data-ar="في خدمة جنوب غرب فلوريدا منذ عام 1982">Serving South West Florida Since 1982</h2>
+                <div class="w-16 h-1 bg-goldCustom mx-auto mt-3 rounded-md"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Pillar Card 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:border-goldCustom hover:shadow-glow-gold transition duration-300">
+                    <div class="w-12 h-12 bg-sapphireNavy text-goldCustom rounded-md flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-mosque"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-sapphireNavy mb-2" data-en="Daily Worship & Remembrance" data-ar="الصلاة والذكر اليومي">Daily Worship & Remembrance</h3>
+                    <p class="text-xs md:text-sm text-gray-600 leading-relaxed" data-en="Providing a peaceful, welcoming environment for daily congregational prayers and weekly Friday Jumu'ah services for Muslim families across Charlotte County." data-ar="توفير بيئة طاهرة ومرحبّة لأداء الصلوات الخمس وصلاة الجمعة لجميع العائلات المسلمة في المنطقة.">
+                        Providing a peaceful, welcoming environment for daily congregational prayers and weekly Friday Jumu'ah services for Muslim families across Charlotte County.
+                    </p>
+                </div>
+
+                <!-- Pillar Card 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:border-goldCustom hover:shadow-glow-gold transition duration-300">
+                    <div class="w-12 h-12 bg-sapphireNavy text-goldCustom rounded-md flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-sapphireNavy mb-2" data-en="Community & Youth Support" data-ar="رعاية المجتمع والشباب">Community & Youth Support</h3>
+                    <p class="text-xs md:text-sm text-gray-600 leading-relaxed" data-en="Nurturing future generations through Islamic education, youth interactive games, social gatherings, and community guidance." data-ar="تربية الأجيال القادمة من خلال التعليم الإسلامي والأنشطة التفاعلية للأطفال واللقاءات الأخوية.">
+                        Nurturing future generations through Islamic education, youth interactive games, social gatherings, and community guidance.
+                    </p>
+                </div>
+
+                <!-- Pillar Card 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:border-goldCustom hover:shadow-glow-gold transition duration-300">
+                    <div class="w-12 h-12 bg-sapphireNavy text-goldCustom rounded-md flex items-center justify-center text-2xl font-bold mb-4">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-sapphireNavy mb-2" data-en="Social Care & Funeral Support" data-ar="الخدمات الاجتماعية والجنائز">Social Care & Funeral Support</h3>
+                    <p class="text-xs md:text-sm text-gray-600 leading-relaxed" data-en="Assisting families during life's milestones—including matrimonial Nikah ceremony consultation and 24/7 bereavement funeral care." data-ar="مساندة العائلات في جميع مراحل الحياة مع استشارات عقد النكاح ورعاية الجنائز والتجهيز على مدار 24/7.">
+                        Assisting families during life's milestones—including matrimonial Nikah ceremony consultation and 24/7 bereavement funeral care.
+                    </p>
+                </div>
+            </div>
+
+            <!-- DASHED IMAGE PLACEHOLDER FOR FACILITY SHOWCASE -->
+            <div class="mt-10 border-2 border-dashed border-goldCustom/50 bg-white p-8 rounded-2xl text-center">
+                <i class="fa-solid fa-camera text-3xl text-goldCustom mb-2 block"></i>
+                <span class="font-bold text-sm text-sapphireNavy block" data-en="[ IMAGE PLACEHOLDER: Masjid Nur Exterior & Main Musalla Entrance - 1200 x 500 px ]" data-ar="[ مكان الصورة: المظهر الخارجي لمسجد نور والمدخل الرئيسي - 1200 × 500 بكسل ]">[ IMAGE PLACEHOLDER: Masjid Nur Exterior & Main Musalla Entrance - 1200 x 500 px ]</span>
+                <span class="text-xs text-gray-500" data-en="Shows the physical house of worship located at 25148 Harborview Rd, Punta Gorda, FL." data-ar="يعرض مبنى المسجد الواقع في 25148 طريق هاربوفيو، بونتا غوردا، فلوريدا.">Shows the physical house of worship located at 25148 Harborview Rd, Punta Gorda, FL.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE SACRED HUB: TOP 10 SURAHS PLAYER & SACRED DHIKR CARDS -->
+    <section id="spiritual-hub" class="py-14 md:py-20 bg-sapphireNavy text-white border-b border-goldCustom/30">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-10">
+                <span class="text-goldCustom font-bold text-xs md:text-sm tracking-widest uppercase block" data-en="Spiritual Enrichment" data-ar="الإِثْرَاءُ الرُّوحِيُّ">Spiritual Enrichment</span>
+                <h2 class="font-serif text-2xl md:text-4xl font-bold text-white mt-1" data-en="Interactive Sacred Hub" data-ar="المركز الروحي التفاعلي">Interactive Sacred Hub</h2>
+                <div class="w-16 h-1 bg-goldCustom mx-auto mt-3 rounded-md"></div>
+                <p class="text-xs md:text-sm text-gray-300 mt-2 font-light" data-en="Listen to essential Surahs frequently recited in congregational worship and reflect upon daily Quranic remembrance." data-ar="استمع إلى السور العشر الأساسية واذكر الله تعالى بالأذكار المأثورة.">
+                    Listen to essential Surahs frequently recited in congregational worship and reflect upon daily Quranic remembrance.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Left: Top 10 Essential Surahs Audio Player -->
+                <div class="lg:col-span-7 glass-panel-dark p-6 rounded-2xl border border-goldCustom/40 shadow-2xl space-y-4">
+                    <div class="flex justify-between items-center border-b border-goldCustom/30 pb-3">
+                        <div>
+                            <h3 class="font-serif font-bold text-lg text-goldCustom flex items-center gap-2">
+                                <i class="fa-solid fa-book-quran"></i>
+                                <span data-en="Top 10 Essential Surahs for Mosques" data-ar="السور العشر الأساسية للمساجد">Top 10 Essential Surahs for Mosques</span>
+                            </h3>
+                            <span class="text-[11px] text-gray-300 block" data-en="High-Definition Recitations" data-ar="تلاوات عالية الجودة">High-Definition Recitations</span>
+                        </div>
+                        <span class="bg-goldCustom/20 text-goldCustom text-[10px] font-bold px-2.5 py-1 rounded-md border border-goldCustom/30" id="current-surah-tag">Surah 1: Al-Fatiha</span>
+                    </div>
+
+                    <!-- Audio Progress & Track Display -->
+                    <div class="bg-sapphireDark/80 p-4 rounded-xl border border-gray-700/60 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h4 class="font-bold text-sm text-white" id="now-playing-title">Surah Al-Fatiha (The Opening)</h4>
+                                <div class="text-xs text-goldCustom font-serif" id="now-playing-arabic">سُورَةُ الْفَاتِحَة</div>
+                            </div>
+                            <span class="text-xs font-mono text-gray-400" id="audio-time">0:00 / 0:00</span>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="w-full bg-sapphireNavy rounded-md h-2 overflow-hidden cursor-pointer" onclick="seekAudio(event)" id="progress-container">
+                            <div id="audio-progress" class="bg-goldCustom h-2 rounded-md transition-all duration-200" style="width: 0%;"></div>
+                        </div>
+
+                        <!-- Audio Control Buttons -->
+                        <div class="flex items-center justify-between pt-1">
+                            <div class="flex items-center gap-3">
+                                <button onclick="prevSurah()" class="w-8 h-8 rounded-md bg-sapphireNavy hover:bg-goldCustom hover:text-sapphireDark text-white transition flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-backward-step"></i>
+                                </button>
+                                <button onclick="togglePlayAudio()" id="play-btn" class="w-10 h-10 rounded-md bg-goldCustom hover:bg-goldHover text-sapphireDark font-bold transition flex items-center justify-center text-lg shadow-md">
+                                    <i class="fa-solid fa-play" id="play-icon"></i>
+                                </button>
+                                <button onclick="nextSurah()" class="w-8 h-8 rounded-md bg-sapphireNavy hover:bg-goldCustom hover:text-sapphireDark text-white transition flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-forward-step"></i>
+                                </button>
+                            </div>
+                            <!-- Volume slider -->
+                            <div class="flex items-center gap-1.5 text-xs text-gray-300">
+                                <i class="fa-solid fa-volume-high text-goldCustom"></i>
+                                <input type="range" min="0" max="1" step="0.05" value="0.8" onchange="setVolume(this.value)" class="w-20 accent-goldCustom cursor-pointer">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Surah Tracklist Selector Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 max-h-56 overflow-y-auto pr-1 text-xs" id="surah-grid">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Right: Sacred Dhikr & Quranic Reflection Cards -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="bg-sapphireCard/90 p-6 rounded-2xl border border-goldCustom/30 shadow-xl space-y-3">
+                        <div class="text-goldCustom text-xs font-bold uppercase tracking-wider" data-en="Sacred Quranic Reflection" data-ar="تَأَمُّلٌ قُرْآنِيٌّ كَرِيمٌ">Sacred Quranic Reflection</div>
+                        <div class="text-lg font-serif text-white leading-relaxed text-center py-2" dir="rtl">
+                            «أَلا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ»
+                        </div>
+                        <p class="text-xs text-gray-300 text-center italic" data-en="“Unquestionably, by the remembrance of Allah do hearts find rest.” (Surah Ar-Ra'd 13:28)" data-ar="«الَّذِينَ آمَنُوا وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ اللَّهِ ۗ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ»">
+                            “Unquestionably, by the remembrance of Allah do hearts find rest.” (Surah Ar-Ra'd 13:28)
+                        </p>
+                    </div>
+
+                    <div class="bg-sapphireCard/90 p-6 rounded-2xl border border-goldCustom/30 shadow-xl space-y-3">
+                        <div class="text-goldCustom text-xs font-bold uppercase tracking-wider" data-en="Daily Essential Dhikr" data-ar="الأَذْكَارُ اليَوْمِيَّةُ المَأْثُورَةُ">Daily Essential Dhikr</div>
+                        <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                            <div class="p-2.5 bg-sapphireDark rounded-md border border-goldCustom/20">
+                                <div class="font-serif text-goldCustom font-bold text-sm">سُبْحَانَ ٱللَّٰهِ</div>
+                                <div class="text-[10px] text-gray-300 mt-0.5">SubhanAllah</div>
+                            </div>
+                            <div class="p-2.5 bg-sapphireDark rounded-md border border-goldCustom/20">
+                                <div class="font-serif text-goldCustom font-bold text-sm">ٱلْحَمْدُ لِلَّٰهِ</div>
+                                <div class="text-[10px] text-gray-300 mt-0.5">Alhamdulillah</div>
+                            </div>
+                            <div class="p-2.5 bg-sapphireDark rounded-md border border-goldCustom/20">
+                                <div class="font-serif text-goldCustom font-bold text-sm">ٱللَّٰهُ أَكْبَرُ</div>
+                                <div class="text-[10px] text-gray-300 mt-0.5">Allahu Akbar</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES & MATRIMONIAL (NIKAH) PORTAL SECTION -->
+    <section id="services" class="py-14 md:py-20 bg-sandLight border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-10">
+                <span class="text-goldCustom font-bold text-xs md:text-sm tracking-widest uppercase block" data-en="Community Guidance & Milestones" data-ar="الإِرْشَادُ المُمَكَّنُ وَالعُقُودُ">Community Guidance & Milestones</span>
+                <h2 class="font-serif text-2xl md:text-4xl font-bold text-sapphireNavy mt-1" data-en="Services & Matrimonial (Nikah) Portal" data-ar="بَوَّابَةُ الخَدَمَاتِ وَعُقُودِ النِّكَاحِ">Services & Matrimonial (Nikah) Portal</h2>
+                <div class="w-16 h-1 bg-goldCustom mx-auto mt-3 rounded-md"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left: Nikah Ceremony Requirements -->
+                <div class="lg:col-span-6 bg-white p-6 rounded-2xl shadow-md border border-gray-200 space-y-4">
+                    <div class="flex items-center gap-2 border-b border-gray-100 pb-3">
+                        <i class="fa-solid fa-rings-wedding text-goldCustom text-xl"></i>
+                        <h3 class="font-serif font-bold text-lg text-sapphireNavy" data-en="Islamic Marriage (Nikah) Guidelines" data-ar="شُرُوطُ وَإِرْشَادَاتُ عَقْدِ النِّكَاحِ">Islamic Marriage (Nikah) Guidelines</h3>
+                    </div>
+
+                    <p class="text-xs md:text-sm text-gray-600 leading-relaxed" data-en="Masjid Nur offers consultation and officiating services for Islamic marriage ceremonies in strict compliance with Islamic Sharia and Florida state laws." data-ar="يُقَدِّمُ مَسْجِدُ نُور خَدَمَاتِ الاستِشَارَةِ وَتَوْثِيقِ عُقُودِ النِّكَاحِ وفقاً لِلشَّرِيعَةِ الإِسْلَامِيَّةِ وَقَوَانِينِ وِلَايَةِ فْلُورِيدَا.">
+                        Masjid Nur offers consultation and officiating services for Islamic marriage ceremonies in strict compliance with Islamic Sharia and Florida state laws.
+                    </p>
+
+                    <div class="space-y-2 text-xs">
+                        <div class="flex items-start gap-2 p-2.5 bg-sandLight rounded-md border border-gray-200">
+                            <span class="w-5 h-5 rounded-md bg-sapphireNavy text-goldCustom font-bold text-[10px] flex items-center justify-center shrink-0">1</span>
+                            <div>
+                                <strong class="text-sapphireNavy block" data-en="Civil Marriage License" data-ar="رُخْصَةُ الزَّوَاجِ المَدَنِيَّةِ">Civil Marriage License</strong>
+                                <span class="text-gray-500" data-en="Valid civil license from Charlotte, Lee, or Sarasota County clerk." data-ar="رُخْصَة مَدَنِيَّة صَالِحَة مِنْ المَحْكَمَةِ المَحَلِّيَّةِ.">Valid civil license from Charlotte, Lee, or Sarasota County clerk.</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-2 p-2.5 bg-sandLight rounded-md border border-gray-200">
+                            <span class="w-5 h-5 rounded-md bg-sapphireNavy text-goldCustom font-bold text-[10px] flex items-center justify-center shrink-0">2</span>
+                            <div>
+                                <strong class="text-sapphireNavy block" data-en="Bride's Guardian (Wali) & Witnesses" data-ar="وَلِيُّ أَمْرِ العَرُوسِ وَالشَّاهِدَانِ">Bride's Guardian (Wali) & Witnesses</strong>
+                                <span class="text-gray-500" data-en="Presence of the Wali and two upright male Muslim witnesses." data-ar="حُضُورُ وَلِيِّ الأَمْرِ وَشَاهِدَيْنِ مُسْلِمَيْنِ.">Presence of the Wali and two upright male Muslim witnesses.</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-2 p-2.5 bg-sandLight rounded-md border border-gray-200">
+                            <span class="w-5 h-5 rounded-md bg-sapphireNavy text-goldCustom font-bold text-[10px] flex items-center justify-center shrink-0">3</span>
+                            <div>
+                                <strong class="text-sapphireNavy block" data-en="Agreed Mahr (Dowry)" data-ar="المَهْرُ المُتَّفَقُ عَلَيْهِ">Agreed Mahr (Dowry)</strong>
+                                <span class="text-gray-500" data-en="Mutual agreement upon the bridal gift as commanded in Islam." data-ar="الاتِّفَاقُ المُتَبَادَلُ عَلَى الصَّدَاقِ.">Mutual agreement upon the bridal gift as commanded in Islam.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DASHED IMAGE PLACEHOLDER FOR NIKAH HALL -->
+                    <div class="border-2 border-dashed border-goldCustom/40 bg-sandLight p-4 rounded-md text-center text-xs">
+                        <i class="fa-solid fa-camera text-goldCustom block mb-1"></i>
+                        <span class="font-bold text-sapphireNavy block" data-en="[ IMAGE PLACEHOLDER: Nikah Ceremony Space - 600 x 300 px ]" data-ar="[ مكان الصورة: قاعة النكاح والاحتفالات - 600 × 300 بكسل ]">[ IMAGE PLACEHOLDER: Nikah Ceremony Space - 600 x 300 px ]</span>
+                    </div>
+                </div>
+
+                <!-- Right: Nikah Inquiry Form -->
+                <div class="lg:col-span-6 bg-white p-6 rounded-2xl shadow-md border border-gray-200 space-y-4">
+                    <h3 class="font-serif font-bold text-lg text-sapphireNavy border-b border-gray-100 pb-3" data-en="Submit a Nikah Inquiry" data-ar="تَقْدِيمُ طَلَبِ استِفْسَارِ عَقْدِ نِكَاحٍ">Submit a Nikah Inquiry</h3>
+                    <form onsubmit="handleNikahSubmit(event)" class="space-y-3 text-xs">
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-1" data-en="Groom's Full Name" data-ar="اسم العريس الكامل">Groom's Full Name</label>
+                            <input type="text" required class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-goldCustom bg-sandLight">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-1" data-en="Bride's Full Name" data-ar="اسم العروس الكامل">Bride's Full Name</label>
+                            <input type="text" required class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-goldCustom bg-sandLight">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-1" data-en="Contact Phone Number" data-ar="رقم هاتف التواصل">Contact Phone Number</label>
+                            <input type="tel" required placeholder="(941) 000-0000" class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-goldCustom bg-sandLight">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-1" data-en="Requested Ceremony Date" data-ar="التاريخ المطلوب للعقد">Requested Ceremony Date</label>
+                            <input type="date" required class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-goldCustom bg-sandLight">
+                        </div>
+                        <button type="submit" class="w-full bg-sapphireNavy hover:bg-sapphireDark text-goldCustom font-bold py-2.5 rounded-md shadow-md transition" data-en="Submit Nikah Consultation Inquiry" data-ar="إرسال طلب الاستفسار">Submit Nikah Consultation Inquiry</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 24/7 JANAZAH & FUNERAL ASSISTANCE PORTAL -->
+    <section id="janazah" class="py-14 md:py-18 bg-amber-950 text-white border-y-4 border-amber-600">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-8 space-y-3 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-1.5 bg-amber-800/60 text-amber-300 text-xs px-3 py-1 rounded-md uppercase font-bold border border-amber-600/40">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span data-en="24/7 Bereavement Emergency Hotline" data-ar="خط طوارئ الجنائز على مدار 24/7">24/7 Bereavement Emergency Hotline</span>
+                    </div>
+
+                    <h2 class="font-serif text-2xl md:text-4xl font-bold text-amber-200" data-en="24/7 Funeral & Janazah Care Protocol" data-ar="خَدَمَاتُ الجَنَائِزِ وَالإِكْرَامِ عَلَى مَدَارِ 24 سَاعَةٍ">
+                        24/7 Funeral & Janazah Care Protocol
+                    </h2>
+
+                    <div class="text-base font-serif text-amber-300 leading-relaxed" dir="rtl">
+                        «إِنَّا لِلَّٰهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ»
+                    </div>
+
+                    <p class="text-xs md:text-sm text-amber-100/90 leading-relaxed max-w-2xl" data-en="In times of loss, Masjid Nur provides prompt, compassionate Islamic funeral management—including Ghusl (ritual washing), Kafan (shrouding), Janazah prayer at the mosque, and burial arrangements." data-ar="في حالات الوفاة، يقدم مسجد نور خدمات الإكرام الشرعية من الغسل والتكفين وصلاة الجنازة والتنسيق للدفن.">
+                        In times of loss, Masjid Nur provides prompt, compassionate Islamic funeral management—including Ghusl (ritual washing), Kafan (shrouding), Janazah prayer at the mosque, and burial arrangements.
+                    </p>
+
+                    <!-- 4-Step Protocol Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2.5 pt-2 text-xs">
+                        <div class="p-2.5 bg-amber-900/60 rounded-md border border-amber-700/50">
+                            <strong class="text-amber-300 block" data-en="1. Call Hotline" data-ar="1. الاتصال الفوري">1. Call Hotline</strong>
+                            <span class="text-amber-100 text-[11px]" data-en="(941) 625-8855" data-ar="(941) 625-8855">(941) 625-8855</span>
+                        </div>
+                        <div class="p-2.5 bg-amber-900/60 rounded-md border border-amber-700/50">
+                            <strong class="text-amber-300 block" data-en="2. Ghusl & Kafan" data-ar="2. الغسل والتكفين">2. Ghusl & Kafan</strong>
+                            <span class="text-amber-100 text-[11px]" data-en="Ritual Washing" data-ar="الغسل الشرعي">Ritual Washing</span>
+                        </div>
+                        <div class="p-2.5 bg-amber-900/60 rounded-md border border-amber-700/50">
+                            <strong class="text-amber-300 block" data-en="3. Salat al-Janazah" data-ar="3. صلاة الجنازة">3. Salat al-Janazah</strong>
+                            <span class="text-amber-100 text-[11px]" data-en="At Masjid Nur" data-ar="في مسجد نور">At Masjid Nur</span>
+                        </div>
+                        <div class="p-2.5 bg-amber-900/60 rounded-md border border-amber-700/50">
+                            <strong class="text-amber-300 block" data-en="4. Islamic Burial" data-ar="4. الدفن الشرعي">4. Islamic Burial</strong>
+                            <span class="text-amber-100 text-[11px]" data-en="Cemetery Transport" data-ar="النقل للمقبرة">Cemetery Transport</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-4 text-center space-y-3">
+                    <a href="tel:9416258855" class="inline-block bg-amber-500 hover:bg-amber-400 text-amber-950 font-bold text-lg md:text-xl px-6 py-4 rounded-md shadow-2xl transition transform hover:scale-105 border-2 border-amber-300">
+                        <i class="fa-solid fa-phone-flip mr-2"></i>
+                        <span>(941) 625-8855</span>
+                    </a>
+                    <div class="text-xs text-amber-200" data-en="Immediate 24/7 Funeral Coordination" data-ar="تنسيق جنائزي مباشر على مدار 24/7">Immediate 24/7 Funeral Coordination</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE KIDS CORNER & ISLAMIC GAMES SECTION -->
+    <section id="kids-corner" class="py-14 md:py-20 bg-sandLight border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-10">
+                <span class="text-goldCustom font-bold text-xs md:text-sm tracking-widest uppercase block" data-en="Youth Learning & Joy" data-ar="رُكْنُ الأَطْفَالِ وَالأَلْعَابِ التعليمية">Youth Learning & Joy</span>
+                <h2 class="font-serif text-2xl md:text-4xl font-bold text-sapphireNavy mt-1" data-en="Interactive Kids Corner & Games" data-ar="رُكْنُ الأَطْفَالِ وَالأَلْعَابُ التَّفَاعُلِيَّةُ">Interactive Kids Corner & Games</h2>
+                <div class="w-16 h-1 bg-goldCustom mx-auto mt-3 rounded-md"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Game 1: 20-Question Islamic Knowledge Quest Quiz -->
+                <div class="lg:col-span-7 bg-white p-6 rounded-2xl shadow-md border border-gray-200 space-y-4">
+                    <div class="flex justify-between items-center border-b border-gray-100 pb-3">
+                        <h3 class="font-serif font-bold text-lg text-sapphireNavy flex items-center gap-2">
+                            <i class="fa-solid fa-award text-goldCustom"></i>
+                            <span data-en="Islamic Knowledge Quest (20 Questions)" data-ar="مسابقة المعرفة الإسلامية (20 سؤالاً)">Islamic Knowledge Quest (20 Questions)</span>
+                        </h3>
+                        <span id="quiz-progress" class="text-xs font-bold bg-sapphireNavy text-goldCustom px-2.5 py-1 rounded-md">Question 1 of 20</span>
+                    </div>
+
+                    <!-- Quiz Question Box -->
+                    <div id="quiz-container" class="space-y-3">
+                        <div class="font-bold text-sm text-sapphireNavy" id="quiz-question-text">Question loading...</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2" id="quiz-options-container">
+                            <!-- Injected by JS -->
+                        </div>
+                        <div id="quiz-explanation" class="hidden text-xs p-3 rounded-md bg-sandLight border border-gray-200 text-gray-700"></div>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-xs font-bold text-gray-500" data-en="Score:" data-ar="النتيجة:">Score: <strong id="quiz-score" class="text-goldCustom">0</strong> / 20</span>
+                            <button onclick="nextQuizQuestion()" id="quiz-next-btn" class="hidden bg-sapphireNavy hover:bg-sapphireDark text-goldCustom font-bold text-xs px-4 py-2 rounded-md shadow-sm transition" data-en="Next Question" data-ar="السؤال التالي">Next Question</button>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Win Banner -->
+                    <div id="quiz-completed" class="hidden text-center space-y-3 py-6">
+                        <i class="fa-solid fa-trophy text-4xl text-goldCustom animate-bounce block"></i>
+                        <h4 class="font-serif font-bold text-xl text-sapphireNavy" data-en="Ma sha Allah! Quiz Completed!" data-ar="مَا شَاءَ اللَّهُ! أَكْمَلْتَ المُسَابَقَةَ!">Ma sha Allah! Quiz Completed!</h4>
+                        <p class="text-xs text-gray-600" data-en="Final Score:" data-ar="النتيجة النهائية:">Final Score: <strong id="quiz-final-score" class="text-goldCustom font-bold text-sm">20</strong> / 20</p>
+                        <button onclick="resetQuiz()" class="bg-goldCustom hover:bg-goldHover text-sapphireDark font-bold text-xs px-5 py-2.5 rounded-md shadow-md transition" data-en="Play Again" data-ar="إعادة اللعب">Play Again</button>
+                    </div>
+                </div>
+
+                <!-- Game 2: Interactive Islamic Symbol Match Memory Game -->
+                <div class="lg:col-span-5 bg-white p-6 rounded-2xl shadow-md border border-gray-200 space-y-4">
+                    <div class="flex justify-between items-center border-b border-gray-100 pb-3">
+                        <h3 class="font-serif font-bold text-lg text-sapphireNavy flex items-center gap-2">
+                            <i class="fa-solid fa-puzzle-piece text-goldCustom"></i>
+                            <span data-en="Islamic Symbol Match" data-ar="لُعْبَةُ طَابِقِ الرُّمُوزَ">Islamic Symbol Match</span>
+                        </h3>
+                        <span class="text-xs font-bold text-gray-500"><span data-en="Flips:" data-ar="النقرات:">Flips:</span> <span id="memory-flips" class="text-sapphireNavy font-bold">0</span></span>
+                    </div>
+
+                    <p class="text-xs text-gray-600" data-en="Flip cards to match 4 identical Islamic symbol pairs!" data-ar="انقر على البطاقات لمطابقة أزواج الرموز الإسلامية!">Flip cards to match 4 identical Islamic symbol pairs!</p>
+
+                    <!-- Memory Grid Container -->
+                    <div id="memory-grid" class="min-h-[220px] grid grid-cols-4 gap-2.5">
+                        <!-- Cards injected by JS -->
+                    </div>
+
+                    <div id="memory-win" class="hidden text-center p-3 bg-sapphireNavy text-goldCustom rounded-md text-xs font-bold">
+                        🎉 <span data-en="Ma sha Allah! You matched all pairs!" data-ar="مَا شَاءَ اللَّهُ! طَابَقْتَ جَمِيعَ الأَزْوَاجِ!">Ma sha Allah! You matched all pairs!</span>
+                    </div>
+
+                    <button onclick="initMemoryGame()" class="w-full bg-goldCustom hover:bg-goldHover text-sapphireDark font-bold text-xs py-2.5 rounded-md transition shadow-sm" data-en="Restart Memory Game" data-ar="إعادة لعبة الذاكرة">
+                        <i class="fa-solid fa-rotate text-xs mr-1"></i> Restart Memory Game
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECURE DONATION HUB SECTION -->
+    <section id="donate" class="py-14 md:py-20 bg-white border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-10">
+                <span class="text-goldCustom font-bold text-xs md:text-sm tracking-widest uppercase block" data-en="Support Our Sanctuary" data-ar="دَعْمُ بَيْتِ اللَّهِ المَبَارَكِ">Support Our Sanctuary</span>
+                <h2 class="font-serif text-2xl md:text-4xl font-bold text-sapphireNavy mt-1" data-en="Secure Donation Portal" data-ar="بَوَّابَةُ التَّبَرُّعِ الآمِنَةِ">Secure Donation Portal</h2>
+                <div class="w-16 h-1 bg-goldCustom mx-auto mt-3 rounded-md"></div>
+                <p class="text-xs md:text-sm text-gray-600 mt-2" data-en="Support daily mosque operations, youth programs, and community assistance through our official gateway." data-ar="ادعم تشغيل المسجد وبرامج الشباب ورعاية المجتمع عبر بوابة التبرع الرسمية.">
+                    Support daily mosque operations, youth programs, and community assistance through our official gateway.
+                </p>
+            </div>
+
+            <div class="max-w-2xl mx-auto bg-sandLight p-6 md:p-8 rounded-2xl border border-gray-200 shadow-lg space-y-6">
+                <!-- Donation Tiers -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 mb-2" data-en="Select Donation Amount ($)" data-ar="اختر مبلغ التبرع ($)">Select Donation Amount ($)</label>
+                    <div class="grid grid-cols-5 gap-2">
+                        <button onclick="selectTier(25)" class="py-2 bg-white hover:bg-goldCustom hover:text-sapphireDark font-bold text-xs rounded-md border border-gray-300 shadow-sm transition">$25</button>
+                        <button onclick="selectTier(50)" class="py-2 bg-white hover:bg-goldCustom hover:text-sapphireDark font-bold text-xs rounded-md border border-gray-300 shadow-sm transition">$50</button>
+                        <button onclick="selectTier(100)" class="py-2 bg-white hover:bg-goldCustom hover:text-sapphireDark font-bold text-xs rounded-md border border-gray-300 shadow-sm transition">$100</button>
+                        <button onclick="selectTier(250)" class="py-2 bg-white hover:bg-goldCustom hover:text-sapphireDark font-bold text-xs rounded-md border border-gray-300 shadow-sm transition">$250</button>
+                        <button onclick="selectTier(500)" class="py-2 bg-white hover:bg-goldCustom hover:text-sapphireDark font-bold text-xs rounded-md border border-gray-300 shadow-sm transition">$500</button>
+                    </div>
+                </div>
+
+                <!-- Custom Amount Input -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 mb-1" data-en="Custom Amount ($)" data-ar="مبلغ مخصص ($)">Custom Amount ($)</label>
+                    <input type="number" id="custom-amount" placeholder="Enter custom amount" class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-goldCustom bg-white text-xs">
+                </div>
+
+                <!-- Cause Selector -->
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 mb-1" data-en="Fund Designation" data-ar="تحديد المصرف">Fund Designation</label>
+                    <select class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-goldCustom bg-white text-xs">
+                        <option data-en="General Mosque Operations" data-ar="النفقات العامة للمسجد">General Mosque Operations</option>
+                        <option data-en="Building Maintenance & Facilities" data-ar="صيانة المبنى والمرافق">Building Maintenance & Facilities</option>
+                        <option data-en="Zakat & Sadaqah Assistance" data-ar="الزكاة والصدقات">Zakat & Sadaqah Assistance</option>
+                    </select>
+                </div>
+
+                <!-- Official Donate Gateway Link -->
+                <a href="https://masjidnur.org/donate" target="_blank" rel="noopener" class="w-full block text-center bg-goldCustom hover:bg-goldHover text-sapphireDark font-bold py-3.5 rounded-md shadow-md hover:shadow-glow-gold transition text-sm">
+                    <i class="fa-solid fa-lock text-xs mr-1.5"></i>
+                    <span data-en="Proceed to Secure Online Donation Gateway" data-ar="الانتقال إلى بوابة التبرع الإلكتروني الآمنة">Proceed to Secure Online Donation Gateway</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING CHATBOT & MODALS -->
+    <!-- Floating Chat Trigger -->
+    <button id="chat-trigger" onclick="toggleChatbot()" class="fixed bottom-6 right-6 z-50 bg-sapphireNavy text-goldCustom p-3.5 rounded-xl shadow-2xl border-2 border-goldCustom hover:scale-105 transition flex items-center gap-2">
+        <i class="fa-solid fa-comments text-xl"></i>
+        <span class="hidden md:inline font-bold text-xs text-white" data-en="Ask Masjid Assistant" data-ar="مساعد المسجد">Ask Masjid Assistant</span>
+    </button>
+
+    <!-- Chatbot Modal Window -->
+    <div id="chatbot-modal" class="hidden fixed bottom-20 right-6 z-50 w-80 md:w-96 bg-white rounded-2xl shadow-2xl border-2 border-goldCustom overflow-hidden flex flex-col h-[450px]">
+        <div class="bg-sapphireNavy text-white p-3.5 flex justify-between items-center border-b border-goldCustom/30">
+            <div class="flex items-center space-x-2 space-x-reverse">
+                <i class="fa-solid fa-robot text-goldCustom"></i>
+                <div>
+                    <div class="font-serif font-bold text-xs text-goldCustom" data-en="Masjid Nur Virtual Assistant" data-ar="المساعد الافتراضي لمسجد نور">Masjid Nur Virtual Assistant</div>
+                    <div class="text-[9px] text-gray-300" data-en="Grounded in Website Details" data-ar="إجابات مستندة إلى معلومات المسجد">Grounded in Website Details</div>
+                </div>
+            </div>
+            <button onclick="toggleChatbot()" class="text-gray-300 hover:text-goldCustom text-xs font-bold px-2 py-1 rounded bg-sapphireDark border border-gray-700">
+                <i class="fa-solid fa-xmark mr-1"></i>
+                <span data-en="Close" data-ar="إغلاق">Close</span>
+            </button>
+        </div>
+
+        <!-- Chat Messages Tray -->
+        <div id="chat-messages" class="flex-1 p-3 overflow-y-auto space-y-2 text-xs bg-sandLight">
+            <div class="bg-sapphireNavy/10 text-sapphireNavy p-3 rounded-xl border border-sapphireNavy/20">
+                <span data-en="Assalamu Alaikum! How can I assist you with prayer timings, location, services, or contacting the admin team?" data-ar="السلام عليكم ورحمة الله! كيف يمكنني مساعدتك اليوم بخصوص المواقيت أو الموقع أو الخدمات؟">Assalamu Alaikum! How can I assist you with prayer timings, location, services, or contacting the admin team?</span>
+            </div>
+        </div>
+
+        <!-- Chat Suggestions Pills -->
+        <div class="p-2 bg-white border-t border-gray-200 flex gap-1.5 overflow-x-auto text-[10px]">
+            <button onclick="sendQuickQuery('Prayer Times')" class="bg-sandLight hover:bg-goldCustom/20 text-sapphireNavy font-bold px-2.5 py-1 rounded-md border border-gray-300 shrink-0" data-en="Prayer Times" data-ar="مواقيت الصلاة">Prayer Times</button>
+            <button onclick="sendQuickQuery('Nikah Inquiry')" class="bg-sandLight hover:bg-goldCustom/20 text-sapphireNavy font-bold px-2.5 py-1 rounded-md border border-gray-300 shrink-0" data-en="Nikah Info" data-ar="معلومات النكاح">Nikah Info</button>
+            <button onclick="sendQuickQuery('Janazah Emergency')" class="bg-sandLight hover:bg-goldCustom/20 text-sapphireNavy font-bold px-2.5 py-1 rounded-md border border-gray-300 shrink-0" data-en="24/7 Janazah" data-ar="الجنائز 24/7">24/7 Janazah</button>
+            <button onclick="openDMModal()" class="bg-goldCustom/20 text-sapphireNavy font-bold px-2.5 py-1 rounded-md border border-goldCustom shrink-0" data-en="Send DM" data-ar="إرسال رسالة">Send DM</button>
+        </div>
+
+        <!-- Chat Input Form -->
+        <div class="p-2 bg-white border-t border-gray-200 flex items-center gap-1.5">
+            <input type="text" id="chat-input" placeholder="Type your query..." onkeypress="if(event.key==='Enter') handleUserChat()" class="flex-1 px-3 py-1.5 rounded-md border border-gray-300 text-xs focus:outline-none focus:border-goldCustom bg-sandLight">
+            <button onclick="handleUserChat()" class="bg-sapphireNavy text-goldCustom p-1.5 rounded-md text-xs font-bold">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <button onclick="toggleChatbot()" class="bg-gray-200 text-gray-700 px-2 py-1.5 rounded-md text-[10px] font-bold" data-en="Close Chat" data-ar="إغلاق">Close Chat</button>
+        </div>
+    </div>
+
+    <!-- SEPARATE DIRECT MESSAGE (DM) MODAL POPUP -->
+    <div id="dm-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border-2 border-goldCustom relative space-y-4">
+            <button onclick="closeDMModal()" class="absolute top-4 right-4 text-gray-400 hover:text-sapphireNavy p-1 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div>
+                <div class="text-xs font-bold text-goldCustom uppercase tracking-wider" data-en="Direct Administration Line" data-ar="إدارة المسجد المباشرة">Direct Administration Line</div>
+                <h3 class="font-serif text-xl font-bold text-sapphireNavy" data-en="Send a Direct Message" data-ar="إرسال رسالة مباشرة للإدارة">Send a Direct Message</h3>
+                <p class="text-xs text-gray-600 mt-1" data-en="Our administrative board will review and respond directly via Phone Call or SMS within 24–48 hours." data-ar="ستقوم إدارة المسجد بمراجعة رسالتك والرد عبر الهاتف أو الرسائل في غضون 24-48 ساعة.">Our administrative board will review and respond directly via Phone Call or SMS within <strong>24–48 hours</strong>.</p>
+            </div>
+
+            <form onsubmit="handleDMSubmit(event)" class="space-y-3 text-xs">
+                <div>
+                    <label class="block text-gray-700 font-bold mb-1" data-en="Your Full Name" data-ar="الاسم الكامل">Your Full Name</label>
+                    <input type="text" required class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-goldCustom bg-sandLight">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-1" data-en="Phone Number (for response)" data-ar="رقم الهاتف للرد">Phone Number (for response)</label>
+                    <input type="tel" required placeholder="(941) 000-0000" class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-goldCustom bg-sandLight">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-1" data-en="Preferred Contact Method" data-ar="طريقة التواصل المفضلة">Preferred Contact Method</label>
+                    <select class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-goldCustom bg-sandLight">
+                        <option data-en="Phone Call" data-ar="اتصال هاتفي">Phone Call</option>
+                        <option data-en="SMS Text Message" data-ar="رسالة نصية قصيرة">SMS Text Message</option>
+                        <option data-en="WhatsApp Message" data-ar="رسالة واتساب">WhatsApp Message</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-1" data-en="Message Details" data-ar="تفاصيل الرسالة">Message Details</label>
+                    <textarea rows="3" required placeholder="Type your message here..." class="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-goldCustom bg-sandLight"></textarea>
+                </div>
+                <div class="flex gap-2 pt-1">
+                    <button type="submit" class="flex-1 bg-sapphireNavy hover:bg-sapphireDark text-goldCustom font-bold py-2.5 rounded-md shadow-md transition" data-en="Submit Direct Message" data-ar="إرسال الرسالة">Submit Direct Message</button>
+                    <button type="button" onclick="closeDMModal()" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold px-4 py-2.5 rounded-md transition" data-en="Cancel" data-ar="إلغاء">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- COMPREHENSIVE FOOTER & LOCATION BLUEPRINT -->
+    <footer class="bg-sapphireDark text-white pt-12 pb-20 border-t border-goldCustom/30">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+                <!-- Col 1: About -->
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-2 space-x-reverse">
+                        <div class="w-8 h-8 rounded-md bg-sapphireNavy text-goldCustom flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-mosque"></i>
+                        </div>
+                        <span class="font-serif font-bold text-lg text-goldCustom" data-en="Masjid Nur" data-ar="مَسْجِدُ نُور">Masjid Nur</span>
+                    </div>
+                    <p class="text-xs text-gray-300 leading-relaxed font-light" data-en="A long-standing regional spiritual sanctuary serving Port Charlotte, Punta Gorda, and Charlotte County since 1982." data-ar="صرح إسلامي مبارك يخدم منطقة بورت شارلوت وبونتا غوردا ومقاطعة شارلوت منذ عام 1982.">
+                        A long-standing regional spiritual sanctuary serving Port Charlotte, Punta Gorda, and Charlotte County since 1982.
+                    </p>
+                </div>
+
+                <!-- Col 2: Navigation Links -->
+                <div class="space-y-2 text-xs">
+                    <h4 class="font-serif font-bold text-goldCustom uppercase tracking-wider mb-2" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+                    <div><a href="#about" class="hover:text-goldCustom transition" data-en="About Our Sanctuary" data-ar="عن المركز">About Our Sanctuary</a></div>
+                    <div><a href="#spiritual-hub" class="hover:text-goldCustom transition" data-en="Top 10 Surahs Player" data-ar="مستمع السور العشر">Top 10 Surahs Player</a></div>
+                    <div><a href="#services" class="hover:text-goldCustom transition" data-en="Services & Nikah Guidelines" data-ar="إرشادات النكاح والخدمات">Services & Nikah Guidelines</a></div>
+                    <div><a href="#janazah" class="hover:text-goldCustom transition text-amber-300" data-en="24/7 Janazah Funeral Care" data-ar="رعاية الجنائز 24/7">24/7 Janazah Funeral Care</a></div>
+                    <div><a href="#kids-corner" class="hover:text-goldCustom transition" data-en="Kids Corner & Trivia Quiz" data-ar="ركن الأطفال والمسابقات">Kids Corner & Trivia Quiz</a></div>
+                </div>
+
+                <!-- Col 3: Contact Details & Directions Link -->
+                <div class="space-y-2 text-xs">
+                    <h4 class="font-serif font-bold text-goldCustom uppercase tracking-wider mb-2" data-en="Contact & Address" data-ar="معلومات الاتصال والعنوان">Contact & Address</h4>
+                    <div class="flex items-start gap-2 text-gray-300">
+                        <i class="fa-solid fa-location-dot text-goldCustom mt-0.5 shrink-0"></i>
+                        <span>
+                            25148 Harborview Rd, Punta Gorda, FL 33980
+                            <a href="https://maps.google.com/?q=25148+Harborview+Rd,+Punta+Gorda,+FL+33980" target="_blank" rel="noopener" class="text-goldCustom hover:underline font-bold block mt-0.5" data-en="Get Google Maps Directions →" data-ar="اتجاهات خرائط جوجل ←">Get Google Maps Directions →</a>
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-300 pt-1">
+                        <i class="fa-solid fa-phone text-goldCustom shrink-0"></i>
+                        <a href="tel:9416258855" class="hover:text-goldCustom font-bold">(941) 625-8855</a>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-300">
+                        <i class="fa-brands fa-whatsapp text-emerald-400 shrink-0"></i>
+                        <a href="https://wa.me/19416258855" target="_blank" rel="noopener" class="hover:text-goldCustom font-bold" data-en="WhatsApp Chat: (941) 625-8855" data-ar="واتساب: (941) 625-8855">WhatsApp Chat: (941) 625-8855</a>
+                    </div>
+                </div>
+
+                <!-- Col 4: Facility Features -->
+                <div class="space-y-2 text-xs">
+                    <h4 class="font-serif font-bold text-goldCustom uppercase tracking-wider mb-2" data-en="Facility Amenities" data-ar="مرافق المسجد">Facility Amenities</h4>
+                    <div class="text-gray-300 flex items-center gap-1.5"><i class="fa-solid fa-check text-goldCustom"></i> <span data-en="Dedicated Women's Prayer & Wudu Facilities" data-ar="مصلى وموضأ مخصص للنساء">Dedicated Women's Prayer & Wudu Facilities</span></div>
+                    <div class="text-gray-300 flex items-center gap-1.5"><i class="fa-solid fa-check text-goldCustom"></i> <span data-en="Wheelchair Accessible Premises" data-ar="مرافق مجهزة لذوي الاحتياجات">Wheelchair Accessible Premises</span></div>
+                    <div class="text-gray-300 flex items-center gap-1.5"><i class="fa-solid fa-check text-goldCustom"></i> <span data-en="Onsite Parking Lot" data-ar="مواقف سيارات واسعة">Onsite Parking Lot</span></div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 text-center text-[11px] text-gray-400 flex flex-col md:flex-row justify-between items-center gap-2">
+                <div data-en="© 2026 Masjid Nur Islamic Community of South West Florida. All Rights Reserved." data-ar="© 2026 مَسْجِدُ نُور - المَرْكَزُ الإِسْلَامِيُّ لِجَنُوبِ غَرِبِ فْلُورِيدَا. جَمِيعُ الحُقُوقِ مَحْفُوظَةٍ.">
+                    © 2026 Masjid Nur Islamic Community of South West Florida. All Rights Reserved.
+                </div>
+                <div class="text-goldCustom font-serif" data-en="Designed for Sacred Tranquility & Community Service" data-ar="صُمِّمَ لِلرَّاحَةِ الإِيمَانِيَّةِ وَخِدْمَةِ المُلْتَقَى">
+                    Designed for Sacred Tranquility & Community Service
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC & ENGINES -->
+    <script>
+        let currentLang = 'en';
+
+        // Full Page Language Toggle Logic
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            const btnLabel = document.getElementById("lang-label");
+            if (btnLabel) btnLabel.innerText = currentLang === 'en' ? 'العربية' : 'English (EN)';
+
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+            // Convert all elements with data-en & data-ar
+            document.querySelectorAll('[data-en]').forEach(el => {
+                const enText = el.getAttribute('data-en');
+                const arText = el.getAttribute('data-ar');
+                if (currentLang === 'ar' && arText) {
+                    el.innerHTML = arText;
+                } else if (currentLang === 'en' && enText) {
+                    el.innerHTML = enText;
+                }
+            });
+
+            // Re-render Quiz in current language
+            if (typeof loadQuizQuestion === 'function') loadQuizQuestion();
+        }
+
+        // Mobile Nav Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Live Clock Function
+        function updateClock() {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            const clockEl = document.getElementById('live-time');
+            if (clockEl) clockEl.innerText = 'Live Clock: ' + timeStr;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // TOP 10 ESSENTIAL SURAHS AUDIO PLAYER ENGINE
+        const surahsData = [
+            { id: 1, nameEn: 'Surah Al-Fatiha', nameAr: 'سُورَةُ الْفَاتِحَة', desc: 'The Opening', url: 'https://server8.mp3quran.net/afs/001.mp3' },
+            { id: 36, nameEn: 'Surah Yasin', nameAr: 'سُورَةُ يس', desc: 'Heart of the Quran', url: 'https://server8.mp3quran.net/afs/036.mp3' },
+            { id: 55, nameEn: 'Surah Ar-Rahman', nameAr: 'سُورَةُ الرَّحْمَٰن', desc: 'The Beneficent', url: 'https://server8.mp3quran.net/afs/055.mp3' },
+            { id: 67, nameEn: 'Surah Al-Mulk', nameAr: 'سُورَةُ الْمُلْك', desc: 'The Sovereignty', url: 'https://server8.mp3quran.net/afs/067.mp3' },
+            { id: 18, nameEn: 'Surah Al-Kahf', nameAr: 'سُورَةُ الْكَهْف', desc: 'The Cave', url: 'https://server8.mp3quran.net/afs/018.mp3' },
+            { id: 56, nameEn: "Surah Al-Waqi'ah", nameAr: 'سُورَةُ الْوَاقِعَة', desc: 'The Inevitable', url: 'https://server8.mp3quran.net/afs/056.mp3' },
+            { id: 2, nameEn: 'Surah Al-Baqarah (Selected)', nameAr: 'سُورَةُ الْبَقَرَة', desc: 'Ayat Al-Kursi', url: 'https://server8.mp3quran.net/afs/002.mp3' },
+            { id: 112, nameEn: 'Surah Al-Ikhlas', nameAr: 'سُورَةُ الإِخْلَاص', desc: 'Sincerity', url: 'https://server8.mp3quran.net/afs/112.mp3' },
+            { id: 113, nameEn: 'Surah Al-Falaq', nameAr: 'سُورَةُ الْفَلَق', desc: 'The Daybreak', url: 'https://server8.mp3quran.net/afs/113.mp3' },
+            { id: 114, nameEn: 'Surah An-Nas', nameAr: 'سُورَةُ النَّاس', desc: 'Mankind', url: 'https://server8.mp3quran.net/afs/114.mp3' }
+        ];
+
+        let currentSurahIdx = 0;
+        let audioPlayer = new Audio();
+        let isPlaying = false;
+
+        function renderSurahGrid() {
+            const grid = document.getElementById('surah-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+            surahsData.forEach((s, idx) => {
+                const active = idx === currentSurahIdx;
+                grid.innerHTML += `
+                    <div onclick="selectSurah(${idx})" class="p-2.5 rounded-md cursor-pointer transition border ${active ? 'bg-goldCustom/20 border-goldCustom text-goldCustom' : 'bg-sapphireNavy/60 border-gray-700/50 hover:bg-sapphireNavy text-gray-200'} flex justify-between items-center">
+                        <div class="flex items-center gap-2">
+                            <span class="w-5 h-5 rounded-md ${active ? 'bg-goldCustom text-sapphireDark' : 'bg-sapphireDark text-goldCustom'} font-bold text-[10px] flex items-center justify-center">${idx + 1}</span>
+                            <div>
+                                <div class="font-bold">${s.nameEn}</div>
+                                <div class="text-[9px] text-gray-400">${s.desc}</div>
+                            </div>
+                        </div>
+                        <div class="font-serif text-xs text-goldCustom">${s.nameAr}</div>
+                    </div>
+                `;
+            });
+        }
+
+        function selectSurah(idx) {
+            currentSurahIdx = idx;
+            const surah = surahsData[currentSurahIdx];
+            audioPlayer.src = surah.url;
+            document.getElementById('now-playing-title').innerText = `${surah.nameEn} (${surah.desc})`;
+            document.getElementById('now-playing-arabic').innerText = surah.nameAr;
+            document.getElementById('current-surah-tag').innerText = `Surah ${surah.id}: ${surah.nameEn}`;
+            renderSurahGrid();
+            if (isPlaying) audioPlayer.play();
+        }
+
+        function togglePlayAudio() {
+            if (!audioPlayer.src) selectSurah(0);
+            const playIcon = document.getElementById('play-icon');
+            if (isPlaying) {
+                audioPlayer.pause();
+                isPlaying = false;
+                playIcon.className = 'fa-solid fa-play';
+            } else {
+                audioPlayer.play();
+                isPlaying = true;
+                playIcon.className = 'fa-solid fa-pause';
+            }
+        }
+
+        function prevSurah() {
+            currentSurahIdx = (currentSurahIdx - 1 + surahsData.length) % surahsData.length;
+            selectSurah(currentSurahIdx);
+            if (isPlaying) audioPlayer.play();
+        }
+
+        function nextSurah() {
+            currentSurahIdx = (currentSurahIdx + 1) % surahsData.length;
+            selectSurah(currentSurahIdx);
+            if (isPlaying) audioPlayer.play();
+        }
+
+        function setVolume(val) {
+            audioPlayer.volume = val;
+        }
+
+        audioPlayer.ontimeupdate = () => {
+            if (!audioPlayer.duration) return;
+            const pct = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            document.getElementById('audio-progress').style.width = pct + '%';
+            
+            const curM = Math.floor(audioPlayer.currentTime / 60);
+            const curS = Math.floor(audioPlayer.currentTime % 60).toString().padStart(2, '0');
+            const durM = Math.floor(audioPlayer.duration / 60) || 0;
+            const durS = Math.floor(audioPlayer.duration % 60 || 0).toString().padStart(2, '0');
+            document.getElementById('audio-time').innerText = `${curM}:${curS} / ${durM}:${durS}`;
+        };
+
+        audioPlayer.onended = () => {
+            nextSurah();
+        };
+
+        renderSurahGrid();
+
+        // 20-QUESTION KIDS ISLAMIC TRIVIA QUIZ ENGINE
+        const quizBank = [
+            { qEn: "What is the Holy Book of Islam revealed to Prophet Muhammad ﷺ?", qAr: "ما هو الكتاب السماوي المنزل على النبي محمد ﷺ؟", optionsEn: ["Torah", "Psalms", "Holy Quran", "Gospel"], optionsAr: ["التوراة", "الزبور", "القرآن الكريم", "الإنجيل"], correct: 2, expEn: "The Holy Quran is the final divine revelation to Prophet Muhammad ﷺ.", expAr: "القرآن الكريم هو كلام الله تعالى المنزل على سيدنا محمد ﷺ." },
+            { qEn: "How many daily mandatory prayers are performed by Muslims?", qAr: "كم عدد الصلوات المفروضة في اليوم والليلة؟", optionsEn: ["3 Prayers", "5 Prayers", "7 Prayers", "10 Prayers"], optionsAr: ["3 صلوات", "5 صلوات", "7 صلوات", "10 صلوات"], correct: 1, expEn: "Muslims perform 5 mandatory prayers: Fajr, Dhuhr, Asr, Maghrib, and Isha.", expAr: "الصلوات الخمس هي الفجر، الظهر، العصر، المغرب، والعشاء." },
+            { qEn: "Which holy month is dedicated to obligatory fasting from dawn to sunset?", qAr: "ما هو الشهر المبارك المخصص لصيام الفريضة؟", optionsEn: ["Muharram", "Rajab", "Ramadan", "Shawwal"], optionsAr: ["محرم", "رجب", "رمضان", "شوال"], correct: 2, expEn: "Ramadan is the blessed month of fasting, prayer, and Quran.", expAr: "شهر رمضان هو شهر الصيام والقيام وتلاوة القرآن." },
+            { qEn: "What is the first Pillar of Islam declaring belief in One Allah & Muhammad ﷺ?", qAr: "ما هو الركن الأول من أركان الإسلام؟", optionsEn: ["Zakat", "Shahada", "Hajj", "Sawm"], optionsAr: ["الزكاة", "الشهادتان", "الحج", "الصوم"], correct: 1, expEn: "The Shahada is the declaration of faith in Allah and His Messenger ﷺ.", expAr: "الشهادتان هما الإقرار بالتوحيد والرسالة." },
+            { qEn: "Toward which holy structure in Makkah do Muslims face during prayer?", qAr: "إلى أي بناء مقدس في مكة يتجه المسلمون في صلاتهم؟", optionsEn: ["Al-Aqsa", "The Holy Kaaba", "Mount Sinai", "Prophet's Mosque"], optionsAr: ["المسجد الأقصى", "الكعبة المشرفة", "جبل طور سيناء", "المسجد النبوي"], correct: 1, expEn: "Muslims around the world face the Holy Kaaba in Makkah.", expAr: "يتجه المسلمون نحو الكعبة المشرفة في جميع صلواتهم." },
+            { qEn: "Which Prophet built the Great Ark to save believers from the flood?", qAr: "من هو النبي الذي بنى السفينة العظيمة لنجاة المؤمنين؟", optionsEn: ["Prophet Ibrahim (AS)", "Prophet Nuh (AS)", "Prophet Yunus (AS)", "Prophet Yusuf (AS)"], optionsAr: ["إبراهيم عليه السلام", "نوح عليه السلام", "يونس عليه السلام", "يوسف عليه السلام"], correct: 1, expEn: "Prophet Nuh (Noah AS) constructed the Ark by Allah's command.", expAr: "بنى نبي الله نوح عليه السلام السفينة بأمر من الله." },
+            { qEn: "What is the ritual purification washing performed before prayer called?", qAr: "ما هي الطهارة المائية المطلوبة قبل الصلاة؟", optionsEn: ["Tayammum", "Wudu (Ablution)", "Ghusl", "Sadaqah"], optionsAr: ["التيمم", "الوضوء", "الغسل", "الصدقة"], correct: 1, expEn: "Wudu is the ritual washing performed prior to prayer.", expAr: "الوضوء هو الطهارة المائية المشروطة للصلاة." },
+            { qEn: "Which blessed night in Ramadan is better than a thousand months?", qAr: "ما هي الليلة المباركة في رمضان التي هي خير من ألف شهر؟", optionsEn: ["Night of Isra", "Laylat al-Qadr", "Eid Night", "Night of Arafah"], optionsAr: ["ليلة الإسراء", "ليلة القدر", "ليلة العيد", "ليلة عرفة"], correct: 1, expEn: "Laylat al-Qadr (Night of Power) is better than 1,000 months.", expAr: "ليلة القدر هي الليلة العظيمة التي أنزل فيها القرآن." },
+            { qEn: "What call to prayer is recited to announce prayer times?", qAr: "ما هو النداء الذي يعلن دخول وقت الصلاة؟", optionsEn: ["Iqamah", "Adhan", "Khutbah", "Dua"], optionsAr: ["الإقامة", "الأذان", "الخطبة", "الدعاء"], correct: 1, expEn: "The Adhan is the sacred call announcing prayer time.", expAr: "الأذان هو النداء المبارك للإعلام بوقت الصلاة." },
+            { qEn: "What Islamic greeting means 'Peace be upon you'?", qAr: "ما هي التحية الإسلامية التي تعني 'السلام عليكم'؟", optionsEn: ["Ahlan", "Marhaban", "Assalamu Alaikum", "Shukran"], optionsAr: ["أهلاً", "مرحباً", "السلام عليكم", "شكراً"], correct: 2, expEn: "Assalamu Alaikum is the traditional greeting of peace.", expAr: "السلام عليكم هي تحية الإسلام المباركة." },
+            { qEn: "How many chapters (Surahs) are in the Holy Quran?", qAr: "كم عدد سور القرآن الكريم؟", optionsEn: ["100", "114", "120", "99"], optionsAr: ["100 سورة", "114 سورة", "120 سورة", "99 سورة"], correct: 1, expEn: "The Holy Quran contains 114 Surahs.", expAr: "يتكون القرآن الكريم من 114 سورة." },
+            { qEn: "Which angel brought Quranic revelations to Prophet Muhammad ﷺ?", qAr: "من هو الملك الذي نزل بالوحي على النبي محمد ﷺ؟", optionsEn: ["Angel Mikail", "Angel Jibril (Gabriel)", "Angel Israfil", "Angel Malik"], optionsAr: ["ميكائيل", "جبريل عليه السلام", "إسرافيل", "مالك"], correct: 1, expEn: "Angel Jibril (Gabriel AS) brought Allah's revelations.", expAr: "جبريل عليه السلام هو ملك الوحي الأمين." },
+            { qEn: "In which holy city was Prophet Muhammad ﷺ born?", qAr: "في أي مدينة مقدسة ولد النبي محمد ﷺ؟", optionsEn: ["Madinah", "Jerusalem", "Makkah", "Cairo"], optionsAr: ["المدينة المنورة", "القدس", "مكة المكرمة", "القاهرة"], correct: 2, expEn: "Prophet Muhammad ﷺ was born in Makkah.", expAr: "ولد نبينا محمد ﷺ في مكة المكرمة." },
+            { qEn: "What special congregational prayer is performed on Friday noon?", qAr: "ما هي صلاة الجماعة الخاصة التي تؤدى ظهر الجمعة؟", optionsEn: ["Taraweeh", "Jumu'ah Prayer", "Tahajjud", "Eid Prayer"], optionsAr: ["التراويح", "صلاة الجمعة", "التهجد", "صلاة العيد"], correct: 1, expEn: "Jumu'ah prayer is performed in congregation every Friday.", expAr: "صلاة الجمعة هي الفريضة الجامعة كل يوم جمعة." },
+            { qEn: "Which Prophet split the Red Sea by Allah's permission?", qAr: "من هو النبي الذي انشق له البحر بأذن الله؟", optionsEn: ["Prophet Isa (AS)", "Prophet Musa (AS)", "Prophet Dawud (AS)", "Prophet Sulaiman (AS)"], optionsAr: ["عيسى عليه السلام", "موسى عليه السلام", "داوود عليه السلام", "سليمان عليه السلام"], correct: 1, expEn: "Prophet Musa (Moses AS) split the sea by Allah's miracle.", expAr: "انشق البحر لنبي الله موسى عليه السلام بمعجزة من الله." },
+            { qEn: "What is compulsory charity given to support those in need called?", qAr: "ما هي الصدقة المفروضة لإعانة المحتاجين؟", optionsEn: ["Zakat", "Hajj", "Sawm", "Sadaqah"], optionsAr: ["الزكاة", "الحج", "الصوم", "الصدقة"], correct: 0, expEn: "Zakat is the obligatory 3rd Pillar of Islam.", expAr: "الزكاة هي الركن الثالث المفروض في الإسلام." },
+            { qEn: "What annual pilgrimage to Makkah is required once in a lifetime if able?", qAr: "ما هي الفريضة التي تؤدى بمكة مرة في العمر لمن استطاع؟", optionsEn: ["Umrah", "Hajj", "Ziyarah", "Fast"], optionsAr: ["العمرة", "الحج", "الزيارة", "الصيام"], correct: 1, expEn: "Hajj is the 5th Pillar of Islam.", expAr: "الحج هو الركن الخامس لمن استطاع إليه سبيلاً." },
+            { qEn: "What is the longest Surah in the Holy Quran?", qAr: "ما هي أطول سورة في القرآن الكريم؟", optionsEn: ["Surah Yasin", "Surah Al-Baqarah", "Surah Al-Imran", "Surah Al-Kahf"], optionsAr: ["سورة يس", "سورة البقرة", "سورة آل عمران", "سورة الكهف"], correct: 1, expEn: "Surah Al-Baqarah is the longest chapter in the Quran.", expAr: "سورة البقرة هي أطول سورة في كتاب الله." },
+            { qEn: "What phrase translates to 'Praise be to Allah'?", qAr: "ما هي العبارة التي تعني 'الحمد لله'؟", optionsEn: ["SubhanAllah", "Alhamdulillah", "Bismillah", "Allahu Akbar"], optionsAr: ["سبحان الله", "الحمد لله", "بسم الله", "الله أكبر"], correct: 1, expEn: "Alhamdulillah means Praise be to Allah.", expAr: "الحمد لله تعني الثناء والشكر لله تعالى." },
+            { qEn: "Which blessed festival marks the end of Ramadan?", qAr: "ما هو العيد المبارك الذي يحتفل به عند انتهاء رمضان؟", optionsEn: ["Eid al-Adha", "Eid al-Fitr", "Mawlid", "Ashura"], optionsAr: ["عيد الأضحى", "عيد الفطر", "المولد النبوي", "عاشوراء"], correct: 1, expEn: "Eid al-Fitr marks the joyful conclusion of Ramadan.", expAr: "عيد الفطر هو عيد الفرحة بعد صيام رمضان." }
+        ];
+
+        let quizCurrentIdx = 0;
+        let quizScore = 0;
+
+        function loadQuizQuestion() {
+            const q = quizBank[quizCurrentIdx];
+            const qText = document.getElementById('quiz-question-text');
+            const progress = document.getElementById('quiz-progress');
+            const optionsContainer = document.getElementById('quiz-options-container');
+            const expBox = document.getElementById('quiz-explanation');
+            const nextBtn = document.getElementById('quiz-next-btn');
+
+            if (!qText || !optionsContainer) return;
+
+            progress.innerText = currentLang === 'ar' ? `السؤال ${quizCurrentIdx + 1} من 20` : `Question ${quizCurrentIdx + 1} of 20`;
+            qText.innerText = currentLang === 'ar' ? q.qAr : q.qEn;
+
+            optionsContainer.innerHTML = '';
+            expBox.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+
+            const options = currentLang === 'ar' ? q.optionsAr : q.optionsEn;
+
+            options.forEach((opt, idx) => {
+                optionsContainer.innerHTML += `
+                    <button onclick="checkQuizAnswer(${idx})" class="w-full text-left p-2.5 rounded-md border border-gray-200 hover:border-goldCustom hover:bg-goldCustom/10 transition text-xs font-semibold text-sapphireNavy bg-sandLight flex items-center justify-between">
+                        <span>${opt}</span>
+                        <i class="fa-regular fa-circle text-gray-400"></i>
+                    </button>
+                `;
+            });
+        }
+
+        function checkQuizAnswer(selectedIdx) {
+            const q = quizBank[quizCurrentIdx];
+            const optionsContainer = document.getElementById('quiz-options-container');
+            const expBox = document.getElementById('quiz-explanation');
+            const nextBtn = document.getElementById('quiz-next-btn');
+            const scoreEl = document.getElementById('quiz-score');
+
+            const buttons = optionsContainer.querySelectorAll('button');
+            buttons.forEach(btn => btn.disabled = true);
+
+            if (selectedIdx === q.correct) {
+                quizScore++;
+                scoreEl.innerText = quizScore;
+                buttons[selectedIdx].className = 'w-full text-left p-2.5 rounded-md border-2 border-green-600 bg-green-50 text-xs font-bold text-green-900 flex items-center justify-between';
+                buttons[selectedIdx].innerHTML += ' <i class="fa-solid fa-check text-green-600"></i>';
+            } else {
+                buttons[selectedIdx].className = 'w-full text-left p-2.5 rounded-md border-2 border-red-500 bg-red-50 text-xs font-bold text-red-900 flex items-center justify-between';
+                buttons[selectedIdx].innerHTML += ' <i class="fa-solid fa-xmark text-red-500"></i>';
+                buttons[q.correct].className = 'w-full text-left p-2.5 rounded-md border-2 border-green-600 bg-green-50 text-xs font-bold text-green-900 flex items-center justify-between';
+            }
+
+            expBox.innerText = currentLang === 'ar' ? q.expAr : q.expEn;
+            expBox.classList.remove('hidden');
+            nextBtn.classList.remove('hidden');
+        }
+
+        function nextQuizQuestion() {
+            quizCurrentIdx++;
+            if (quizCurrentIdx >= quizBank.length) {
+                document.getElementById('quiz-container').classList.add('hidden');
+                document.getElementById('quiz-completed').classList.remove('hidden');
+                document.getElementById('quiz-final-score').innerText = quizScore;
+            } else {
+                loadQuizQuestion();
+            }
+        }
+
+        function resetQuiz() {
+            quizCurrentIdx = 0;
+            quizScore = 0;
+            document.getElementById('quiz-score').innerText = 0;
+            document.getElementById('quiz-container').classList.remove('hidden');
+            document.getElementById('quiz-completed').classList.add('hidden');
+            loadQuizQuestion();
+        }
+
+        loadQuizQuestion();
+
+        // ISLAMIC SYMBOL MATCH MEMORY GAME ENGINE
+        const memoryCardsData = [
+            { id: 'mosque', nameEn: 'Mosque', nameAr: 'مسجد', icon: 'fa-mosque' },
+            { id: 'kaaba', nameEn: 'Kaaba', nameAr: 'كعبة', icon: 'fa-kaaba' },
+            { id: 'quran', nameEn: 'Quran', nameAr: 'قرآن', icon: 'fa-book-quran' },
+            { id: 'crescent', nameEn: 'Crescent', nameAr: 'هلال', icon: 'fa-moon' }
+        ];
+
+        let gameDeck = [];
+        let flippedCards = [];
+        let matchedPairs = 0;
+        let totalFlips = 0;
+
+        function initMemoryGame() {
+            gameDeck = [...memoryCardsData, ...memoryCardsData].sort(() => 0.5 - Math.random());
+            flippedCards = [];
+            matchedPairs = 0;
+            totalFlips = 0;
+
+            document.getElementById('memory-flips').innerText = 0;
+            const grid = document.getElementById('memory-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+            document.getElementById('memory-win').classList.add('hidden');
+
+            gameDeck.forEach((card, idx) => {
+                grid.innerHTML += `
+                    <div id="mem-card-${idx}" onclick="flipMemCard(${idx})" class="h-24 bg-sapphireNavy hover:bg-sapphireDark border-2 border-goldCustom rounded-xl flex items-center justify-center cursor-pointer transition transform hover:scale-105 shadow-md">
+                        <i class="fa-solid fa-star text-goldCustom text-xl" id="mem-icon-${idx}"></i>
+                    </div>
+                `;
+            });
+        }
+
+        function flipMemCard(idx) {
+            if (flippedCards.length >= 2 || flippedCards.includes(idx)) return;
+
+            totalFlips++;
+            document.getElementById('memory-flips').innerText = totalFlips;
+
+            const cardEl = document.getElementById(`mem-card-${idx}`);
+            const iconEl = document.getElementById(`mem-icon-${idx}`);
+            const cardData = gameDeck[idx];
+
+            cardEl.className = 'h-24 bg-white border-2 border-goldCustom rounded-xl flex items-center justify-center shadow-inner';
+            iconEl.className = `fa-solid ${cardData.icon} text-sapphireNavy text-2xl`;
+
+            flippedCards.push(idx);
+
+            if (flippedCards.length === 2) {
+                const [firstIdx, secondIdx] = flippedCards;
+                if (gameDeck[firstIdx].id === gameDeck[secondIdx].id) {
+                    matchedPairs++;
+                    flippedCards = [];
+                    if (matchedPairs === 4) {
+                        document.getElementById('memory-win').classList.remove('hidden');
+                    }
+                } else {
+                    setTimeout(() => {
+                        const card1 = document.getElementById(`mem-card-${firstIdx}`);
+                        const icon1 = document.getElementById(`mem-icon-${firstIdx}`);
+                        const card2 = document.getElementById(`mem-card-${secondIdx}`);
+                        const icon2 = document.getElementById(`mem-icon-${secondIdx}`);
+
+                        card1.className = 'h-24 bg-sapphireNavy hover:bg-sapphireDark border-2 border-goldCustom rounded-xl flex items-center justify-center cursor-pointer transition transform hover:scale-105 shadow-md';
+                        icon1.className = 'fa-solid fa-star text-goldCustom text-xl';
+
+                        card2.className = 'h-24 bg-sapphireNavy hover:bg-sapphireDark border-2 border-goldCustom rounded-xl flex items-center justify-center cursor-pointer transition transform hover:scale-105 shadow-md';
+                        icon2.className = 'fa-solid fa-star text-goldCustom text-xl';
+
+                        flippedCards = [];
+                    }, 800);
+                }
+            }
+        }
+
+        initMemoryGame();
+
+        // MODALS & CHATBOT ENGINE
+        function toggleChatbot() {
+            const modal = document.getElementById('chatbot-modal');
+            if (modal) modal.classList.toggle('hidden');
+        }
+
+        function openDMModal() {
+            const modal = document.getElementById('dm-modal');
+            if (modal) modal.classList.remove('hidden');
+        }
+
+        function closeDMModal() {
+            const modal = document.getElementById('dm-modal');
+            if (modal) modal.classList.add('hidden');
+        }
+
+        function handleDMSubmit(e) {
+            e.preventDefault();
+            alert(currentLang === 'ar' ? 'جزاكم الله خيراً! تم إرسال رسالتكم المباشرة بنجاح. ستتواصل معكم إدارة المسجد خلال 24-48 ساعة.' : 'Jazakum Allahu Khairan! Your direct message has been submitted. Our administrative board will reach out within 24–48 hours.');
+            closeDMModal();
+        }
+
+        function handleNikahSubmit(e) {
+            e.preventDefault();
+            alert(currentLang === 'ar' ? 'تم استلام طلب عقد النكاح بنجاح. سيتواصل معكم ممثل المسجد لتنسيق الموعد.' : 'Nikah inquiry received successfully. A mosque representative will contact you to coordinate requirements and schedule.');
+        }
+
+        function sendQuickQuery(topic) {
+            const messages = document.getElementById('chat-messages');
+            if (!messages) return;
+
+            let reply = '';
+            if (topic === 'Nikah Inquiry' || topic === 'Nikah Info') {
+                reply = currentLang === 'ar' ? 'شروط عقد النكاح: رخصة زواج مدنية صالحة، ولي أمر العروس، شاهدان مسلماني، ومهر متفق عليه. يمكنك ملء النموذج في الموقع.' : 'Nikah Requirements: Valid civil marriage license (Charlotte/Lee/Sarasota), Bride Wali, 2 upright male Muslim witnesses, and agreed Mahr. You can submit the Nikah inquiry form on this page.';
+            } else if (topic === 'Prayer Times') {
+                reply = currentLang === "ar" ? "أوقات الصلاة اليومية: الفجر 6:05 ص، الظهر 1:26 م، العصر 4:56 م (الصلاة القادمة)، المغرب 7:42 م، والعشاء 8:46 م. صلاة الجمعة: الفترة الأولى 1:20 م، الفترة الثانية 2:15 م." : "Today's Prayer Schedule: Fajr 6:05 AM, Dhuhr 1:26 PM, Asr 4:56 PM (Next), Maghrib 7:42 PM, Isha 8:46 PM. Friday Jumu'ah 1st shift 1:20 PM, 2nd shift 2:15 PM.";
+            } else if (topic === 'Janazah Emergency') {
+                reply = currentLang === 'ar' ? 'لطوارئ الجنائز والإكرام، اتصل فوراً بالطوارئ على مدار 24/7 على الرقم (941) 625-8855.' : 'For emergency funeral coordination, call our 24/7 hotline immediately at (941) 625-8855. We handle Ghusl, Kafan, Janazah prayer, and local Islamic burial transport.';
+            }
+
+            messages.innerHTML += `<div class="bg-goldCustom text-sapphireDark p-2.5 rounded-xl rounded-tr-none text-right font-bold my-1">${topic}</div>`;
+            messages.innerHTML += `<div class="bg-sapphireNavy/10 text-sapphireNavy p-3 rounded-xl rounded-tl-none border border-sapphireNavy/20 my-1">${reply}</div>`;
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        function handleUserChat() {
+            const input = document.getElementById('chat-input');
+            if (!input || !input.value.trim()) return;
+            const text = input.value.trim().toLowerCase();
+            input.value = '';
+
+            const messages = document.getElementById('chat-messages');
+            messages.innerHTML += `<div class="bg-goldCustom text-sapphireDark p-2.5 rounded-xl rounded-tr-none text-right font-bold my-1">${text}</div>`;
+
+            let reply = '';
+            if (text.includes('prayer') || text.includes('time') || text.includes('asr') || text.includes('jumu') || text.includes('صلاة') || text.includes('جمعة')) {
+                reply = currentLang === "ar" ? "أوقات الصلاة: الفجر 6:05 ص، الظهر 1:26 م، العصر 4:56 م، المغرب 7:42 م، والعشاء 8:46 م. صلاة الجمعة: 1:20 م و 2:15 م." : "Prayer Schedule: Fajr 6:05 AM, Dhuhr 1:26 PM, Asr 4:56 PM, Maghrib 7:42 PM, Isha 8:46 PM. Friday Jumu'ah: 1st shift 1:20 PM, 2nd shift 2:15 PM.";
+            } else if (text.includes('address') || text.includes('location') || text.includes('where') || text.includes('عنوان') || text.includes('موقع')) {
+                reply = currentLang === 'ar' ? 'عنوان المسجد: 25148 طريق هاربوفيو، بونتا غوردا، فلوريدا 33980.' : 'Masjid Nur Address: 25148 Harborview Rd, Punta Gorda, FL 33980.';
+            } else if (text.includes('phone') || text.includes('contact') || text.includes('number') || text.includes('هاتف') || text.includes('اتصال')) {
+                reply = currentLang === 'ar' ? 'رقم الهاتف الرئيسي والواتساب: (941) 625-8855.' : 'Main Phone & WhatsApp: (941) 625-8855.';
+            } else {
+                reply = currentLang === 'ar' ? 'شكراً لرسالتك! لطلب خاص غير موجود بالموقع، يرجى الضغط على زر "إرسال رسالة" لفتح نموذج التواصل المباشر مع إدارة المسجد.' : 'Thank you for your question! For specific inquiries not detailed on the website, please click "Send DM" to open a direct message form to our administrative team.';
+                setTimeout(() => openDMModal(), 1200);
+            }
+
+            messages.innerHTML += `<div class="bg-sapphireNavy/10 text-sapphireNavy p-3 rounded-xl rounded-tl-none border border-sapphireNavy/20 my-1">${reply}</div>`;
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        function downloadICS() {
+            const icsData = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Masjid Nur//Jumuah Prayer//EN\nBEGIN:VEVENT\nSUMMARY:Friday Jumu'ah Prayer at Masjid Nur\nDESCRIPTION:1st Shift Khutbah 1:20 PM / Iqamah 1:35 PM\nLOCATION:25148 Harborview Rd, Punta Gorda, FL 33980\nEND:VEVENT\nEND:VCALENDAR";
+            const blob = new Blob([icsData], { type: 'text/calendar' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'masjid-nur-jumuah.ics';
+            a.click();
+        }
+    </script>
+</body>
+</html>
